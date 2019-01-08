@@ -1,13 +1,12 @@
 ## Getting Started
 
-To get you started you can simply clone the `Product-Catalog-assign` repository and install the dependencies:
+To get started simply clone the `Product-Catalog-assign` repository and install the dependencies:
 
 ### Prerequisites
 
-You need git to clone the `Product-Catalog-assign` repository.
+Git is required to clone the `Product-Catalog-assign` repository.
 
-We also use a number of Node.js tools to initialize `Product-Catalog-assign`. You must have Node.js
-and its package manager (npm) installed.
+Node.js and its package manager (npm) are also required to initialize `Product-Catalog-assign` application.
 
 ### Clone `Product-Catalog-assign`
 
