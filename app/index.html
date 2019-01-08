@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html ng-app="productCatalogApp">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Product Catalog</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+        <script src="js/lib/angular.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controllers/productCatalogController.js"></script>
+        <script src="js/services/productCatalogService.js"></script>
+    </head>
+    <body class="container">
+        <main class="row" ng-controller="productCatalogController">
+            <h1>Product Catalog</h1>
+            <section class="col-lg-9 col-md-9 col-sm-8 product-grid" ng-init="getProductCatalogData()">
+                <div class="col-lg-4 col-md-4 col-sm-6 product-grid-item" ng-repeat="product in productList | orderBy: 'productName'" ng-if="product.isPublished == 'true'">
+                    <h4>{{product.productName}}</h4>
+                    <figure>
+                        <img class="img-responsive" ng-src="{{product.productImage}}" alt="{{product.productName}}" />
+                    </figure>
+                    <span>&#36; {{product.price}}</span>
+                    <button class="btn btn-default" ng-click="addProductToCart(product)">Add to cart</button>
+                </div>
+            </section>
+            <section class="col-lg-3 col-md-3 col-sm-4 shopping-cart">
+                <h4>Shopping Cart</h4>
+                <p ng-if="!showShoppingCartProducts">No products selected</p>
+                <div ng-if="showShoppingCartProducts" ng-repeat="product in shoppingCartList" class="clearfix">
+                    <span>{{product.productName}}</span>
+                    <button class="btn btn-default pull-right" ng-click="removeProductFromCart(product)">Remove</button>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
