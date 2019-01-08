@@ -4,18 +4,18 @@ To get you started you can simply clone the `Product-Catalog-assign` repository 
 
 ### Prerequisites
 
-You need git to clone the `Product-Catalog-assign` repository. You can get git from [here][git].
+You need git to clone the `Product-Catalog-assign` repository.
 
 We also use a number of Node.js tools to initialize `Product-Catalog-assign`. You must have Node.js
-and its package manager (npm) installed. You can get them from [here][node].
+and its package manager (npm) installed.
 
 ### Clone `Product-Catalog-assign`
 
 Clone the `Product-Catalog-assign` repository using git:
 
 ```
-git clone https://github.com/angular/angular-seed.git
-cd Assignment
+git clone https://github.com/Raunak06/Product-Catalog-assign.git
+cd Product-Catalog-assign
 ```
 
 ### Install Dependencies
