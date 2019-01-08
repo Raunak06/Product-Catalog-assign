@@ -22,7 +22,8 @@
                         <img class="img-responsive" ng-src="{{product.productImage}}" alt="{{product.productName}}" />
                     </figure>
                     <span>&#36; {{product.price}}</span>
-                    <button class="btn btn-default" ng-click="addProductToCart(product)">Add to cart</button>
+                    <button class="btn btn-default" aria-label="{{product.productName}} Add to cart" 
+                    ng-click="addProductToCart(product)">Add to cart</button>
                 </div>
             </section>
             <section class="col-lg-3 col-md-3 col-sm-4 shopping-cart">
@@ -30,7 +31,8 @@
                 <p ng-if="!showShoppingCartProducts">No products selected</p>
                 <div ng-if="showShoppingCartProducts" ng-repeat="product in shoppingCartList" class="clearfix">
                     <span>{{product.productName}}</span>
-                    <button class="btn btn-default pull-right" ng-click="removeProductFromCart(product)">Remove</button>
+                    <button class="btn btn-default pull-right" aria-label="{{product.productName}} Remove from cart" 
+                    ng-click="removeProductFromCart(product)">Remove</button>
                 </div>
             </section>
         </main>
